@@ -9,6 +9,12 @@ function adicionarAmigo() {
         return;
     }
 
+    const nomeMinusculo = nome.toLowerCase();
+    if (amigosSorteio.some(amigo => amigo.toLowerCase() === nomeMinusculo)) {
+        alert('Este nome já foi adicionado!');
+        return;
+    }
+
     if (nome.length > 30) {
         alert('O nome deve ter no máximo 30 caracteres!');
         return;
